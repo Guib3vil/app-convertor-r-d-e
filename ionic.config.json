@@ -1,0 +1,7 @@
+{
+  "name": "AppConvertorR/D/E",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
