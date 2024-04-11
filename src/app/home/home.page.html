@@ -1,20 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      App Conversor
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-item>
+    <ion-input [(ngModel)]="dinheiro" label="Valor" labelPlacement="floating" placeholder="Digite o valor do dinheiro"></ion-input>
+    </ion-item>
+    <ion-label>Moeda de Origem</ion-label>
+    <ion-radio-group [(ngModel)]="origem">
+    <ion-item>
+    <ion-label>Real</ion-label>
+    <ion-radio value="R"></ion-radio>
+    </ion-item>
+    <ion-item>
+    <ion-label>Dólar</ion-label>
+    <ion-radio value="D"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Euro</ion-label>
+      <ion-radio value="E"></ion-radio>
+      </ion-item>
+      <ion-label>Moeda para qual será convertida</ion-label>
+    </ion-radio-group>
+    <ion-radio-group [(ngModel)]="destino">
+      <ion-item>
+      <ion-label>Real</ion-label>
+      <ion-radio value="R"></ion-radio>
+      </ion-item>
+      <ion-item>
+      <ion-label>Dólar</ion-label>
+      <ion-radio value="D"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Euro</ion-label>
+        <ion-radio value="E"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    <ion-button expand="block" (click)="calcularConversao()">Calcular</ion-button>
+    </ion-content>
