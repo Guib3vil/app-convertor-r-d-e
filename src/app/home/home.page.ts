@@ -10,7 +10,7 @@ constructor(private alertController: AlertController) {}
 dinheiro=''; // valor do dinheiro
 origem=''; // moeda de origem. EX: Real
 destino=''; // moeda para qual vai ser convertida. EX: Dólar
-VF=0;
+VF=0; // valor final da conversão
 
 calcularConversao() { // Função que calcula a conversão
   if (this.origem==='R' && this.destino==='D') { // Real para Dólar
